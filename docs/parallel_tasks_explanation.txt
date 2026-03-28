@@ -1,0 +1,24 @@
+PARALLEL TASKS EXPLANATION
+
+1. What are parallel tasks?
+   Parallel tasks allow a computer to perform multiple operations at the same time, rather than waiting for one to finish before starting the next. Think of it like a kitchen with multiple chefs: one chops vegetables, another cooks the meat, and a third plates the food. They work simultaneously to complete the meal faster.
+
+2. Application in a Crypto System
+   In a Crypto Portfolio Manager, parallelism is crucial because we deal with external data (APIs), database operations, and user calculations, which have different timing needs.
+
+   a) Data Collection (I/O Bound)
+      Fetching prices from CoinGecko takes time (waiting for the internet). While waiting for the price of Bitcoin, the system can simultaneously start fetching the price of Ethereum, or check if the database is ready.
+   
+   b) Data Storage (I/O Bound)
+      Writing to the database also takes time. We can fetch new data in the background while the previous batch is being written to disk.
+
+   c) Analysis & Alerts (CPU Bound)
+      Calculating portfolio performance or checking for price alerts (e.g., "Tell me if BTC drops 5%") can run on a separate "thread" or process. This ensures that the user interface remains responsive and doesn't freeze while complex math is happening.
+
+   d) Reporting
+      Generating a monthly PDF report can happen in the background without stopping the user from viewing their current dashboard.
+
+3. Why is this useful?
+   - Speed: The total time to update 50 coins is significantly reduced.
+   - Responsiveness: The application doesn't "freeze" while working.
+   - Scalability: As we track more coins (e.g., 1000+), doing everything one-by-one becomes too slow. Parallelism allows us to scale up efficiently.

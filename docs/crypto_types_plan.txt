@@ -1,0 +1,33 @@
+CRYPTO TYPES PLANNING
+
+1. Supported Crypto Assets
+   We aim to support a diverse range of assets to reflect a realistic portfolio.
+
+   a) Layer-1 Blockchains (The Foundation)
+      - Bitcoin (BTC): The store of value.
+      - Ethereum (ETH): The smart contract platform.
+      - Solana (SOL): High-speed blockchain.
+   
+   b) Stablecoins (Risk Management)
+      - USDT (Tether)
+      - USDC (USD Coin)
+      - Purpose: Used by traders to hedge against volatility. We must track these to show "cash on hand" positions.
+
+   c) DeFi Tokens (Financial Applications)
+      - Uniswap (UNI)
+      - Aave (AAVE)
+   
+   d) Meme Coins (High Risk/Reward)
+      - Dogecoin (DOGE)
+      - Shiba Inu (SHIB)
+      - Purpose: High volatility assets that users often track for fun or speculation.
+
+2. Why CoinGecko?
+   - Coverage: They track thousands of coins, including very small/new ones.
+   - Simplicity: Their API is easy to use and doesn't require complex authentication for basic tiers.
+   - Metadata: They provide good categorization (categories, tags) which helps us group coins later.
+
+3. Future Scalability Ideas
+   - Categorization: Automatically tag coins as "DeFi", "L1", etc. based on API metadata.
+   - Multi-chain tracking: Tracking the *same* token across different networks (e.g., USDT on Ethereum vs. Tron).
+   - NFT Support: Future modules could track floor prices of NFT collections.

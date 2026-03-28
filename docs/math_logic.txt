@@ -1,0 +1,42 @@
+MATHEMATICAL LOGIC DOCUMENTATION
+
+1. Profit and Loss (PnL)
+   The simplest way to measure performance.
+   
+   Formula:
+   PnL = (Current Price - Buy Price) * Quantity
+
+   Example:
+   You bought 2 ETH at $2,000 each.
+   Current Price of ETH is $3,000.
+   
+   PnL = ($3,000 - $2,000) * 2
+       = $1,000 * 2
+       = $2,000 Profit
+
+2. Percentage Change
+   Shows how much the asset has grown or shrunk relative to the initial investment.
+
+   Formula:
+   % Change = ((Current Price - Buy Price) / Buy Price) * 100
+
+   Example (using above numbers):
+   % Change = (($3,000 - $2,000) / $2,000) * 100
+            = ($1,000 / $2,000) * 100
+            = 0.5 * 100
+            = 50% Increase
+
+3. Portfolio Value Calculation
+   The total value of all assets combined.
+
+   Formula:
+   Total Value = Sum of (Current Price of Coin A * Quantity of Coin A) + (Current Price of Coin B * Quantity of Coin B) + ...
+
+   Example:
+   Portfolio:
+   - 2 ETH at $3,000
+   - 1 BTC at $50,000
+
+   Total Value = ($3,000 * 2) + ($50,000 * 1)
+               = $6,000 + $50,000
+               = $56,000
